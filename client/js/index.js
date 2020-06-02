@@ -1,4 +1,4 @@
-const socket = io('http://127.0.0.1:3001/ws');
+const socket = io('/ws');
 
 socket.on('connect', () =>{
     socket.emit("msg", "hello")
