@@ -1,4 +1,9 @@
-const socket = io('/ws');
+const socket = io('/ws',{
+    transports:["polling","websocket"],
+    transportOptions:{
+        
+    }
+});
 
 socket.on('connect', () =>{
     socket.emit("msg", "hello")
